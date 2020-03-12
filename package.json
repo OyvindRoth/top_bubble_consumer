@@ -1,0 +1,25 @@
+{
+  "name": "top-bubble-consumer",
+  "version": "0.0.0",
+  "description": "Webcomponent top-bubble-consumer following open-wc recommendations",
+  "author": "top-bubble-consumer",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/navikt/top-bubble-consumer"
+  },
+  "scripts": {
+
+    "start": "es-dev-server --app-index ./demo/index.html --node-resolve --open --watch",
+
+    "dev-team-admin-retrieval-update": "polymer serve --entrypoint ./demo/index.html --port 8000 --npm --module-resolution=node"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.1"
+  },
+  "devDependencies": {
+    "es-dev-server": "^1.23.0"
+  }
+}
