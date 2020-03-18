@@ -32,13 +32,11 @@ button {
     border: 2px solid #0067C5;
     color: #0067C5;
 }
-.button-primary {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 0 #C6C2BF;
-    color: #FFF;
-    border-color: #0067C5;
-    background-color: #0067C5;
-    position: relative;
+button:disabled,
+button:disabled {
+    background-color: gray;
+    border: none;
+    color: #070809;
 }
-   `
+`
 }

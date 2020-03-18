@@ -11,7 +11,8 @@
     "url": "https://github.com/navikt/top-bubble-consumer"
   },
   "scripts": {
-    "start": "polymer serve --entrypoint ./demo/index.html --port 8000 --npm --module-resolution=node"
+    "start-top": "polymer serve --entrypoint demo/index_top.html --port 8001 --npm --module-resolution=node",
+    "start-bottom": "polymer serve --entrypoint demo/index_bottom.html --port 8002 --npm --module-resolution=node"
   },
   "dependencies": {
     "lit-element": "^2.2.1"

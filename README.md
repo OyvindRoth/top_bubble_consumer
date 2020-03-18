@@ -29,3 +29,10 @@ If you customize the configuration a lot, you can consider moving them to indivi
 npm start
 ```
 To run a local development server that serves the basic demo located in `demo/index.html`
+
+## Excercise
+- ```top-bubble-consumer``` has a nested web component inside itself: ```bottom-bubble-producer```
+- ```bottom-bubble-producer``` has an input field inside it
+- ```top-bubble-consumer``` has a button inside it
+- When the input field is edited, then the outer button should be enabled/disabled *without the input field being left*.
+- This should be achieved by the inner input field bubbling up some event that the outer button can react to

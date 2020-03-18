@@ -23,14 +23,22 @@ export class TopBubbleConsumer extends LitElement {
   render() {
     return html`
       <h2>${this.title}</h2>
-      <bottom-bubble-producer label="A slotted input field within the bottom web component">
+      <bottom-bubble-producer label="A slotted input field within the bottom web component" @input=${this.slottedInputEditedInTop}>
           <input id="inputFieldId" slot="inputField" type="text"/>
       </bottom-bubble-producer>
       <BR/>
-      <button @click="${this.pressed}">A button in top-bubble-consumer: Press me</button>
+      <button id=buttonId @click="${this.pressed}">A button in top-bubble-consumer: Press me</button>
       <h2>Exercise:</h2>
        Typing something in the input field should toggle enable/disable of the button
     `;
+  }
+
+  slottedInputEditedInTop() {
+    console.log('slottedInputEditedInTop')
+
+    let button = this.shadowRoot.getElementById('buttonId');
+    button.disabled = !button.disabled;
+    this.requestUpdate();
   }
 
   pressed() {
